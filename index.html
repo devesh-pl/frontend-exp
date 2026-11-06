@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form | JavaScript Practice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="eyebrow">JAVASCRIPT MINI PROJECT</div>
+      <h1>Contact us</h1>
+      <p class="intro">Practice form validation, notifications, and live updates.</p>
+
+      <form id="contactForm" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="e.g. Alex Kumar" autocomplete="name" />
+        <small class="error" id="nameError"></small>
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="alex@example.com" autocomplete="email" />
+        <small class="error" id="emailError"></small>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" maxlength="250" placeholder="Write your message..."></textarea>
+        <div class="message-meta">
+          <small class="error" id="messageError"></small>
+          <small id="charCount">0 / 250</small>
+        </div>
+
+        <button type="submit">Send message</button>
+      </form>
+
+      <section class="activity" aria-live="polite">
+        <h2>Live activity</h2>
+        <p id="liveStatus">Waiting for your message…</p>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
